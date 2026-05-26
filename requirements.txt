@@ -1,0 +1,47 @@
+torch>=1.13
+torchvision>=0.14
+timm>=0.6.13
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+```
+
+On Colab, you can install `timm` with:
+```python
+!pip install timm
+```
+
+## Usage
+
+1. **Mount your Google Drive** (if using Colab) to save and load checkpoints:
+    ```python
+    from google.colab import drive
+    drive.mount('/content/drive', force_remount=True)
+    ```
+2. **Run Experiments**:
+    - **Centralized Training** & Grid Search:
+      ```python
+      results_central = hyperparam_grid_search(
+          run_centralized_training,
+          param_grid_centralized,
+          n_seeds=2,
+          experiment_name="Centralized",
+          result_key="val_acc",
+          n_epochs=10
+      )
+      ```
+    - **Federated Averaging (IID & Non-IID)**:
+      ```python
+      run_fedavg_iid_experiment()
+      run_fedavg_noniid_experiments()
+      ```
+    - **Sparse Training Experiments**:
+      ```python
+      run_sparse_experiments()
+      ```
+    - **Mask Overlap Analysis**:
+      ```python
+      mask_overlap_analysis()
+      ```
