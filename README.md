@@ -66,12 +66,5 @@ Configuration constraints and settings managed inside the pipeline (`Config` cla
 * **Hybrid and Fisher-based masks** recorded high structural coherence across client models, showing **pairwise Jaccard similarity indices $> 0.7$ in deep Transformer layers**.
 * Deeper self-attention projection blocks exhibited increased alignment, suggesting that late-stage global semantic features are universally extracted by clients regardless of non-IID label shifts, whereas early blocks remain highly specialized to local visual structures.
 
----
 
-## 📂 Repository Structure
-
-```text
-├── FL_GroupID_14.py            # Complete unified pipeline (Dataloaders, Models, Custom Optimizer, Experiments)
-├── sparse_results.csv          # Output performance tracking for sparse masking iterations
-├── mask_overlap_results.csv    # Evaluated average Jaccard indices across clients
 └── README.md                   # Repository documentation
